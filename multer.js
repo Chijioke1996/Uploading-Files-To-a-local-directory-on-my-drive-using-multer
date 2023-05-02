@@ -75,7 +75,7 @@ app.post('/upload', (req, res) => {
                 });
             } else {
                 res.render('index', {
-                    msg: 'File Uploaded successfully!',
+                    msg: 'File Uploaded successfully',
                     file: `uploads/${req.file.filename}`
                     
                 })
