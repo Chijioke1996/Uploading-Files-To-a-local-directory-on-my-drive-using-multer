@@ -81,6 +81,70 @@
 
 
 
+// OBJECT ORIENTED PROGRAMMING (OOP)... FOR CLEARER UNDERSTANDING SEE VIDEOS BY NET-NINJA
+
+// class User {
+//     constructor (name, age){
+//         this.name = name
+//         this.age = age
+//         this.score = 0
+//     }
+
+
+//     // Methods
+//     signIn(){
+//         console.log(this.name, "Just signed in");
+//         return this
+//     }
+
+//     signOut(){
+//         console.log(this.name, "Just signed out");
+//         return this
+//     }
+
+//     method(){
+//         this.score += 1
+//         console.log(`${this.name}, Your new score: ${this.score}`);
+//         return this
+//     }
+// }
+
+// // Instantiating a fresh user from the class "User"
+
+// const userOne = new User("Chijioke", 20)
+// const userTwo = new User("jane", 30)
+
+// console.log(userOne, userTwo);
+// userOne.signIn().signOut().method()
+
+
+
+
+
+// OLDER WAY OF DECLARING A CLASS USING PROTOTYPING METHODS
+
+    // function User(email, age) {
+    //     this.email = email
+    //     this.age = age
+
+    //     this.login = function () {
+    //         console.log(this.email, 'Just signed in');
+    //     }
+    // }
+
+    // const userOne = new User("Ceejay@gmail.com", 27)
+    // const userTwo = new User("Seyi@gmail.com", 28)
+
+    // console.log(userOne, userTwo);
+    // userOne.login()
+
+
+
+
+
+
+
+
 
 
 

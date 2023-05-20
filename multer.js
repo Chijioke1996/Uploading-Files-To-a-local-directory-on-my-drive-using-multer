@@ -77,7 +77,7 @@ app.post('/upload', (req, res) => {
                 res.render('index', {
                     msg: 'File Uploaded successfully',
                     file: `uploads/${req.file.filename}`
-                    
+
                 })
                 console.log(req.file);
             }
@@ -95,6 +95,8 @@ app.listen(port, (err) => {
         console.log(`App listening on port ${port}`);
     }
 })
+
+
 
 
 
