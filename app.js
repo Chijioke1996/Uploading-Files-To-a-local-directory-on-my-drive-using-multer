@@ -83,39 +83,53 @@
 
 // OBJECT ORIENTED PROGRAMMING (OOP)... FOR CLEARER UNDERSTANDING SEE VIDEOS BY NET-NINJA
 
-// class User {
-//     constructor (name, age){
-//         this.name = name
-//         this.age = age
-//         this.score = 0
-//     }
+class User {
+    constructor (name, age){
+        this.name = name
+        this.age = age
+        this.score = 0
+    }
 
 
-//     // Methods
-//     signIn(){
-//         console.log(this.name, "Just signed in");
-//         return this
-//     }
+    // Methods
+    signIn(){
+        console.log(this.name, "Just signed in");
+        return this
+    }
 
-//     signOut(){
-//         console.log(this.name, "Just signed out");
-//         return this
-//     }
+    signOut(){
+        console.log(this.name, "Just signed out");
+        return this
+    }
 
-//     method(){
-//         this.score += 1
-//         console.log(`${this.name}, Your new score: ${this.score}`);
-//         return this
-//     }
-// }
+    scoreCount(){
+        this.score += 1
+        console.log(`${this.name}, Your new score: ${this.score}`);
+        return this
+    }
+}
 
-// // Instantiating a fresh user from the class "User"
+class Admin  extends User {
+    deleteusers(user){
+        users = users.filter( u => {
+            return u.name != user.name
+        })
+    }
+}
 
-// const userOne = new User("Chijioke", 20)
-// const userTwo = new User("jane", 30)
+// Instantiating a fresh user from the class "User"
+
+const userOne = new User("Chijioke", 20)
+const userTwo = new User("jane", 30)
+const admin = new Admin("Jay", 39)
 
 // console.log(userOne, userTwo);
-// userOne.signIn().signOut().method()
+// userOne.signIn().signOut().scoreCount()
+
+var users = [userOne, userTwo, admin]
+
+admin.deleteusers(userTwo)
+console.log(users);
 
 
 
@@ -137,6 +151,40 @@
 
     // console.log(userOne, userTwo);
     // userOne.login()
+
+
+
+
+    // HTTP SERVER BEFORE THE ADVENT OF EXPRESS LIBRARY
+
+    // const http = require("http")
+    // const PORT = 3000
+   
+    // const server = http.createServer((req, res) => {
+    //     if (req.url === "/news") {
+    //         res.write(`<html>`)
+    //         res.write(`<head>
+    //         <title>Servers</title>
+    //         <body>
+    //         <h1>Welcome to Google Clouds</h1>
+    //         <input type="text" name="search" placeholder="Enter a city"><button type="submit">Send</send>
+    //         </body>
+    //         </head>`)
+    //         res.write(`</html>`)
+    //         res.end() 
+            
+           
+
+    //     }
+    //     else {
+    //         res.write("fuck off scammer")
+    //         res.end()
+    //     }
+       
+        
+    // })
+
+    // server.listen(PORT)
 
 
 
