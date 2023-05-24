@@ -187,6 +187,23 @@ console.log(users);
     // server.listen(PORT)
 
 
+    // BUFFER AND STREAM.... REMOVE THE UTF8 IF YOU NEED TO SEE THE FILE BROKEN INTO BUFFER
+    const fs = require("fs")
+    const path = require("path")
+    const myRead = fs.createReadStream(path.join(__dirname, "test.txt") , "utf8")
+  
+
+    // Listen for when a stream data flows through
+    myRead.on("data", function (chunk) {
+        console.log("New stream received...");
+        console.log(chunk);
+    })
+
+    // To write to a new file named: testWrite.txt
+    const myWrite = fs.createWriteStream(path.join(__dirname, "testWrite.txt") , "utf8")
+    myRead.pipe(myWrite)
+
+
 
 
 
